@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/dvg/icegroupproc">
+      <file>images/filtergroup.png</file>
+    </qresource>
+</RCC>

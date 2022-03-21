@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TurnDialog</class>
+ <widget class="QDialog" name="TurnDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>104</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Произвольный поворот</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../icegui.qrc">
+    <normaloff>:/dvg/icegui/images/turn.png</normaloff>:/dvg/icegui/images/turn.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QSlider" name="turnSlider">
+       <property name="minimum">
+        <number>-180</number>
+       </property>
+       <property name="maximum">
+        <number>180</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="turnSB">
+       <property name="minimum">
+        <number>-180</number>
+       </property>
+       <property name="maximum">
+        <number>180</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="keepSizeChB">
+     <property name="text">
+      <string>Сохранять исходный размер изображения</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="okPB">
+       <property name="text">
+        <string>Да</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelPB">
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../icegui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>turnSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>turnSB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>494</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>okPB</sender>
+   <signal>pressed()</signal>
+   <receiver>TurnDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>397</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelPB</sender>
+   <signal>pressed()</signal>
+   <receiver>TurnDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>478</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>turnSB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>turnSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>494</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>turnSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>TurnDialog</receiver>
+   <slot>turnSlider_valueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>51</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>keepSizeChB</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>TurnDialog</receiver>
+   <slot>keepSizeChB_stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>51</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>turnSlider_valueChanged(int)</slot>
+  <slot>keepSizeChB_stateChanged(int)</slot>
+ </slots>
+</ui>

@@ -1,0 +1,35 @@
+<RCC>
+  <qresource prefix="/dvg/iceapp">
+    <file>images/applicationico.png</file>
+    <file>images/splash.png</file>
+    <file>images/about.png</file>
+    <file>images/open.png</file>
+    <file>images/save.png</file>
+    <file>images/exit.png</file>
+    <file>images/turn.png</file>
+    <file>images/balance.png</file>
+    <file>images/contrast.png</file>
+    <file>images/grayscale.png</file>
+    <file>images/resolution.png</file>
+    <file>images/ruler.png</file>
+    <file>images/grid.png</file>
+    <file>images/zoomin.png</file>
+    <file>images/zoomout.png</file>
+    <file>images/insizeofwindow.png</file> 
+    <file>images/turntoleft.png</file>
+    <file>images/turntoright.png</file>
+    <file>images/turntodown.png</file>
+    <file>images/selectrect.png</file>
+    <file>images/selectellipse.png</file>
+    <file>images/selectpolygon.png</file>
+    <file>images/selectline.png</file>
+    <file>images/connectdb.png</file>
+    <file>images/clearselectrect.png</file>
+    <file>images/move.png</file>
+    <file>images/copy.png</file>
+    <file>images/createfilter.png</file>
+    <file>images/measure.png</file>
+    <file>images/batchprocessing.png</file>
+    <file>translations/qt_ru.qm</file>
+  </qresource>
+</RCC>

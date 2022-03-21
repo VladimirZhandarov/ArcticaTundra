@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/dvg/icefindobjectproc">
+      <file>images/filterobject.png</file>
+    </qresource>
+</RCC>

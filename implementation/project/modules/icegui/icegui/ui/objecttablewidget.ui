@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ObjectTableWidget</class>
+ <widget class="QWidget" name="ObjectTableWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>292</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="saveToFilePB">
+       <property name="text">
+        <string>Экспорт в файл</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="ICEGUI_NS::MaskViewWidget" name="maskViewWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="ICEGUI_NS::LineViewWidget" name="lineViewWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Выделение:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="selectAllPB">
+       <property name="text">
+        <string>Выбрать все</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="unselectAllPB">
+       <property name="text">
+        <string>Снять выбор</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="ICEGUI_NS::ContourTreeView" name="treeView">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="headerDefaultSectionSize">
+      <number>120</number>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="totalObjectCountL">
+         <property name="text">
+          <string>Всего объектов:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="totalObjectCountValueL">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="totalAreaL">
+         <property name="text">
+          <string>Площадь:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="totalAreaValueL">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="totalAreaInPercentL">
+         <property name="text">
+          <string>Относительная:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QLabel" name="totalAreaValueInPercentL">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="6">
+        <widget class="QLabel" name="totalArcLengthL">
+         <property name="text">
+          <string>Периметр:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="7">
+        <widget class="QLabel" name="totalArcLengthValueL">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="selectedObjectCountL">
+         <property name="text">
+          <string>Выбрано объектов:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="selectedObjectCountValueL">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="selectedAreaL">
+         <property name="text">
+          <string>Площадь:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="selectedAreaValueL">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLabel" name="selectedAreaInPercentL">
+         <property name="text">
+          <string>Относительная:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5">
+        <widget class="QLabel" name="selectedAreaValueInPercentL">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="6">
+        <widget class="QLabel" name="selectedArcLengthL">
+         <property name="text">
+          <string>Периметр:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="7">
+        <widget class="QLabel" name="selectedArcLengthValueL">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ICEGUI_NS::ContourTreeView</class>
+   <extends>QTreeView</extends>
+   <header>contourtreeview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ICEGUI_NS::MaskViewWidget</class>
+   <extends>QWidget</extends>
+   <header>maskviewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ICEGUI_NS::LineViewWidget</class>
+   <extends>QWidget</extends>
+   <header>lineviewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../icegui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>saveToFilePB</sender>
+   <signal>clicked()</signal>
+   <receiver>ObjectTableWidget</receiver>
+   <slot>saveToFilePB_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>53</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>selectAllPB</sender>
+   <signal>clicked()</signal>
+   <receiver>ObjectTableWidget</receiver>
+   <slot>onSelectAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>604</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>unselectAllPB</sender>
+   <signal>clicked()</signal>
+   <receiver>ObjectTableWidget</receiver>
+   <slot>onUnselectAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>saveToFilePB_clicked()</slot>
+  <slot>onSelectAll()</slot>
+  <slot>onUnselectAll()</slot>
+ </slots>
+</ui>

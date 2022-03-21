@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>771</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="horizontalSpacing">
+     <number>0</number>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>771</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="openAction"/>
+    <addaction name="openFilterFromFileAction"/>
+    <addaction name="createFromClipboardAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="saveAsAction"/>
+    <addaction name="separator"/>
+    <addaction name="dbSettingAction"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="editMenu">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="copyAllToClipboardAction"/>
+    <addaction name="copySelectedToClipboardAction"/>
+   </widget>
+   <widget class="QMenu" name="viewMenu">
+    <property name="title">
+     <string>Вид</string>
+    </property>
+    <widget class="QMenu" name="settingsMenu">
+     <property name="title">
+      <string>Настройка</string>
+     </property>
+     <addaction name="defaultScaleParamAction"/>
+     <addaction name="lineParamAction"/>
+     <addaction name="gridParamAction"/>
+     <addaction name="addedParamAction"/>
+    </widget>
+    <addaction name="rulerAction"/>
+    <addaction name="gridAction"/>
+    <addaction name="separator"/>
+    <addaction name="zoomInAction"/>
+    <addaction name="zoomOutAction"/>
+    <addaction name="inSizeOfWindowAction"/>
+    <addaction name="separator"/>
+    <addaction name="settingsMenu"/>
+   </widget>
+   <widget class="QMenu" name="imageMenu">
+    <property name="title">
+     <string>Изображение</string>
+    </property>
+    <widget class="QMenu" name="turnImageMenu">
+     <property name="title">
+      <string>Повернуть</string>
+     </property>
+     <addaction name="turn90ToRightAction"/>
+     <addaction name="turn90ToLeftAction"/>
+     <addaction name="turn180Action"/>
+     <addaction name="turnAction"/>
+    </widget>
+    <widget class="QMenu" name="grayMenu">
+     <property name="title">
+      <string>Оттенки серого</string>
+     </property>
+     <addaction name="grayAction"/>
+     <addaction name="grayRAction"/>
+     <addaction name="grayGAction"/>
+     <addaction name="grayBAction"/>
+    </widget>
+    <addaction name="brightnessContrastAction"/>
+    <addaction name="balanceColorAction"/>
+    <addaction name="grayMenu"/>
+    <addaction name="turnImageMenu"/>
+    <addaction name="resolutionAction"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="filterMenu">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Фильтры</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="windowMenu">
+    <property name="title">
+     <string>Окно</string>
+    </property>
+    <addaction name="showFilterManageAction"/>
+    <addaction name="closeAction"/>
+    <addaction name="closeAllAction"/>
+    <addaction name="separator"/>
+    <addaction name="tileVerticalAction"/>
+    <addaction name="tileHorizontalAction"/>
+    <addaction name="cascadeAction"/>
+    <addaction name="separator"/>
+    <addaction name="previousAction"/>
+    <addaction name="nextAction"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="helpMenu">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="aboutAction"/>
+   </widget>
+   <widget class="QMenu" name="operationMenu">
+    <property name="title">
+     <string>Операции</string>
+    </property>
+    <addaction name="cutUpAction"/>
+    <addaction name="cutDownAction"/>
+    <addaction name="batchProcessingAction"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="editMenu"/>
+   <addaction name="viewMenu"/>
+   <addaction name="imageMenu"/>
+   <addaction name="operationMenu"/>
+   <addaction name="filterMenu"/>
+   <addaction name="windowMenu"/>
+   <addaction name="helpMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="fileToolBar">
+   <property name="windowTitle">
+    <string>Файл</string>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="viewToolBar">
+   <property name="windowTitle">
+    <string>Вид</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="imageToolBar">
+   <property name="windowTitle">
+    <string>Изображение</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="openAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/open.png</normaloff>:/dvg/iceapp/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Открыть...</string>
+   </property>
+   <property name="statusTip">
+    <string>Открыть изображение</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="createFromClipboardAction">
+   <property name="text">
+    <string>Создать из буфера обмена</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/save.png</normaloff>:/dvg/iceapp/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить</string>
+   </property>
+   <property name="statusTip">
+    <string>Сохранить изображение</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="saveAsAction">
+   <property name="text">
+    <string>Сохранить как...</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить как</string>
+   </property>
+   <property name="statusTip">
+    <string>Сохранить изображение под другим именем</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="dbSettingAction">
+   <property name="text">
+    <string>Соединение с БД фильтров...</string>
+   </property>
+   <property name="toolTip">
+    <string>Соединение с БД фильтров</string>
+   </property>
+   <property name="statusTip">
+    <string>Настроить соединение с БД фильтров</string>
+   </property>
+  </action>
+  <action name="copyAllToClipboardAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/copy.png</normaloff>:/dvg/iceapp/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Копировать</string>
+   </property>
+   <property name="statusTip">
+    <string>Копировать в буфер обмена всё изображение</string>
+   </property>
+  </action>
+  <action name="copySelectedToClipboardAction">
+   <property name="text">
+    <string>Копировать выделенное</string>
+   </property>
+   <property name="statusTip">
+    <string>Копировать в буфер обмена выделенный участок изображения</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C, Ctrl+Ins</string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="text">
+    <string>О программе...</string>
+   </property>
+   <property name="statusTip">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="rulerAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/ruler.png</normaloff>:/dvg/iceapp/images/ruler.png</iconset>
+   </property>
+   <property name="text">
+    <string>Линейка</string>
+   </property>
+   <property name="statusTip">
+    <string>Линейка</string>
+   </property>
+  </action>
+  <action name="gridAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/grid.png</normaloff>:/dvg/iceapp/images/grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сетка</string>
+   </property>
+   <property name="statusTip">
+    <string>Сетка</string>
+   </property>
+  </action>
+  <action name="setupViewAction">
+   <property name="text">
+    <string>Настройка...</string>
+   </property>
+   <property name="statusTip">
+    <string>Настройка...</string>
+   </property>
+  </action>
+  <action name="zoomInAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/zoomin.png</normaloff>:/dvg/iceapp/images/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Увеличить</string>
+   </property>
+   <property name="statusTip">
+    <string>Увеличить</string>
+   </property>
+  </action>
+  <action name="zoomOutAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/zoomout.png</normaloff>:/dvg/iceapp/images/zoomout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Уменьшить</string>
+   </property>
+   <property name="statusTip">
+    <string>Уменьшить</string>
+   </property>
+  </action>
+  <action name="inSizeOfWindowAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/insizeofwindow.png</normaloff>:/dvg/iceapp/images/insizeofwindow.png</iconset>
+   </property>
+   <property name="text">
+    <string>В размер окна</string>
+   </property>
+   <property name="statusTip">
+    <string>В размер окна</string>
+   </property>
+  </action>
+  <action name="brightnessContrastAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/contrast.png</normaloff>:/dvg/iceapp/images/contrast.png</iconset>
+   </property>
+   <property name="text">
+    <string>Яркость/контрастность/интенсивность...</string>
+   </property>
+   <property name="statusTip">
+    <string>Яркость/контрастность/интенсивность</string>
+   </property>
+  </action>
+  <action name="balanceColorAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/balance.png</normaloff>:/dvg/iceapp/images/balance.png</iconset>
+   </property>
+   <property name="text">
+    <string>Баланс цветов...</string>
+   </property>
+   <property name="statusTip">
+    <string>Баланс цветов</string>
+   </property>
+  </action>
+  <action name="turn90ToRightAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/turntoright.png</normaloff>:/dvg/iceapp/images/turntoright.png</iconset>
+   </property>
+   <property name="text">
+    <string>90° по часовой стрелке</string>
+   </property>
+   <property name="statusTip">
+    <string>90° по часовой стрелке</string>
+   </property>
+  </action>
+  <action name="turn90ToLeftAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/turntoleft.png</normaloff>:/dvg/iceapp/images/turntoleft.png</iconset>
+   </property>
+   <property name="text">
+    <string>90° против часовой стрелке</string>
+   </property>
+   <property name="statusTip">
+    <string>90° против часовой стрелке</string>
+   </property>
+  </action>
+  <action name="turn180Action">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/turntodown.png</normaloff>:/dvg/iceapp/images/turntodown.png</iconset>
+   </property>
+   <property name="text">
+    <string>180°</string>
+   </property>
+   <property name="statusTip">
+    <string>180°</string>
+   </property>
+  </action>
+  <action name="turnAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/turn.png</normaloff>:/dvg/iceapp/images/turn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Произвольный поворот...</string>
+   </property>
+   <property name="statusTip">
+    <string>Произвольный поворот</string>
+   </property>
+  </action>
+  <action name="resolutionAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/resolution.png</normaloff>:/dvg/iceapp/images/resolution.png</iconset>
+   </property>
+   <property name="text">
+    <string>Пересчитать размер</string>
+   </property>
+   <property name="statusTip">
+    <string>Пересчитать размер</string>
+   </property>
+  </action>
+  <action name="showFilterManageAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Просмотр фильтров</string>
+   </property>
+   <property name="statusTip">
+    <string>Показать список фильтров</string>
+   </property>
+  </action>
+  <action name="closeAction">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+   <property name="statusTip">
+    <string>Закрыть окно</string>
+   </property>
+  </action>
+  <action name="closeAllAction">
+   <property name="text">
+    <string>Закрыть все</string>
+   </property>
+   <property name="statusTip">
+    <string>Закрыть все окна</string>
+   </property>
+  </action>
+  <action name="tileVerticalAction">
+   <property name="text">
+    <string>Слева направо</string>
+   </property>
+   <property name="statusTip">
+    <string>Упорядочить окна слева направо плиткой</string>
+   </property>
+  </action>
+  <action name="cascadeAction">
+   <property name="text">
+    <string>Каскадом</string>
+   </property>
+   <property name="statusTip">
+    <string>Каскадом</string>
+   </property>
+  </action>
+  <action name="nextAction">
+   <property name="text">
+    <string>Следующее</string>
+   </property>
+   <property name="statusTip">
+    <string>Следующее окно</string>
+   </property>
+  </action>
+  <action name="previousAction">
+   <property name="text">
+    <string>Предыдущее</string>
+   </property>
+   <property name="statusTip">
+    <string>Предыдущее окно</string>
+   </property>
+  </action>
+  <action name="tileHorizontalAction">
+   <property name="text">
+    <string>Сверху вниз</string>
+   </property>
+   <property name="statusTip">
+    <string>Упорядочить окна сверху вниз плиткой</string>
+   </property>
+  </action>
+  <action name="grayAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/grayscale.png</normaloff>:/dvg/iceapp/images/grayscale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Все каналы</string>
+   </property>
+  </action>
+  <action name="grayRAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/grayscale.png</normaloff>:/dvg/iceapp/images/grayscale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Канал R</string>
+   </property>
+  </action>
+  <action name="grayGAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/grayscale.png</normaloff>:/dvg/iceapp/images/grayscale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Канал G</string>
+   </property>
+  </action>
+  <action name="grayBAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/grayscale.png</normaloff>:/dvg/iceapp/images/grayscale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Канал B</string>
+   </property>
+  </action>
+  <action name="gridParamAction">
+   <property name="text">
+    <string>Сетка ...</string>
+   </property>
+  </action>
+  <action name="lineParamAction">
+   <property name="text">
+    <string>Линейка ...</string>
+   </property>
+  </action>
+  <action name="defaultScaleParamAction">
+   <property name="text">
+    <string>Масштаб по умолчанию</string>
+   </property>
+  </action>
+  <action name="openFilterFromFileAction">
+   <property name="text">
+    <string>Открыть фильтр</string>
+   </property>
+  </action>
+  <action name="cutUpAction">
+   <property name="text">
+    <string>Разрезка изображения ...</string>
+   </property>
+  </action>
+  <action name="cutDownAction">
+   <property name="text">
+    <string>Сшивка изображения ...</string>
+   </property>
+  </action>
+  <action name="batchProcessingAction">
+   <property name="icon">
+    <iconset resource="../iceapp.qrc">
+     <normaloff>:/dvg/iceapp/images/batchprocessing.png</normaloff>:/dvg/iceapp/images/batchprocessing.png</iconset>
+   </property>
+   <property name="text">
+    <string>Пакетная обработка ...</string>
+   </property>
+  </action>
+  <action name="addedParamAction">
+   <property name="text">
+    <string>Дополнительно ...</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../iceapp.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>openAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createFromClipboardAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createFromClipboardAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>saveAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dbSettingAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>dbSettingAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copyAllToClipboardAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>copyAllToClipboardAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copySelectedToClipboardAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>copySelectedToClipboardAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aboutAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>aboutAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rulerAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rulerAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gridAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gridAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomInAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>zoomInAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomOutAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>zoomOutAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inSizeOfWindowAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>inSizeOfWindowAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>brightnessContrastAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>brightnessContrastAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>balanceColorAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>balanceColorAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grayAction</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>grayAction_triggered(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>turn90ToRightAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>turn90ToRightAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>turn90ToLeftAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>turn90ToLeftAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>turn180Action</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>turn180Action_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>turnAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>turnAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resolutionAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>resolutionAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeAction</sender>
+   <signal>triggered()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>closeActiveSubWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeAllAction</sender>
+   <signal>triggered()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>closeAllSubWindows()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tileVerticalAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>tileVerticalAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cascadeAction</sender>
+   <signal>triggered()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>cascadeSubWindows()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nextAction</sender>
+   <signal>triggered()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>activateNextSubWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>previousAction</sender>
+   <signal>triggered()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>activatePreviousSubWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tileHorizontalAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>tileHorizontalAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveAsAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>saveAsAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showFilterManageAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showFilterManageAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gridParamAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gridParamAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineParamAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>lineParamAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>defaultScaleParamAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>defaultScaleParamAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openFilterFromFileAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFilterFromFileAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grayRAction</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>grayRAction_triggered(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grayGAction</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>grayGAction_triggered(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grayBAction</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>grayBAction_triggered(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cutUpAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cutUpAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cutDownAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cutDownAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>batchProcessingAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>batchProcessingAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addedParamAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addedParamAction_triggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openAction_triggered()</slot>
+  <slot>createFromClipboardAction_triggered()</slot>
+  <slot>saveAction_triggered()</slot>
+  <slot>saveAsAction_triggered()</slot>
+  <slot>dbSettingAction_triggered()</slot>
+  <slot>aboutAction_triggered()</slot>
+  <slot>copyAllToClipboardAction_triggered()</slot>
+  <slot>copySelectedToClipboardAction_triggered()</slot>
+  <slot>rulerAction_triggered()</slot>
+  <slot>gridAction_triggered()</slot>
+  <slot>zoomInAction_triggered()</slot>
+  <slot>zoomOutAction_triggered()</slot>
+  <slot>inSizeOfWindowAction_triggered()</slot>
+  <slot>brightnessContrastAction_triggered()</slot>
+  <slot>balanceColorAction_triggered()</slot>
+  <slot>grayAction_triggered(bool)</slot>
+  <slot>turn90ToRightAction_triggered()</slot>
+  <slot>turn90ToLeftAction_triggered()</slot>
+  <slot>turn180Action_triggered()</slot>
+  <slot>turnAction_triggered()</slot>
+  <slot>resolutionAction_triggered()</slot>
+  <slot>tileVerticalAction_triggered()</slot>
+  <slot>tileHorizontalAction_triggered()</slot>
+  <slot>showFilterManageAction_triggered()</slot>
+  <slot>lineParamAction_triggered()</slot>
+  <slot>gridParamAction_triggered()</slot>
+  <slot>defaultScaleParamAction_triggered()</slot>
+  <slot>openFilterFromFileAction_triggered()</slot>
+  <slot>grayRAction_triggered(bool)</slot>
+  <slot>grayGAction_triggered(bool)</slot>
+  <slot>grayBAction_triggered(bool)</slot>
+  <slot>cutUpAction_triggered()</slot>
+  <slot>cutDownAction_triggered()</slot>
+  <slot>batchProcessingAction_triggered()</slot>
+  <slot>addedParamAction_triggered()</slot>
+ </slots>
+</ui>

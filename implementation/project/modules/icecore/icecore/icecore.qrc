@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/dvg/icecore">
+         <file>images/filterparam.png</file>
+         <file>images/filtersection.png</file>
+    </qresource>
+</RCC>

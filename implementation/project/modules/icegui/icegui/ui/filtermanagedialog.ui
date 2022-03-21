@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FilterManageDialog</class>
+ <widget class="QDialog" name="FilterManageDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Выбрать фильтр</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QScrollArea" name="imageScrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>214</width>
+          <height>367</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QWidget" name="imageListWidget" native="true">
+           <layout class="QVBoxLayout" name="imageListWidgetLayout"/>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="findL">
+           <property name="text">
+            <string>Поиск:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="findLE"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="ICEGUI_NS::FilterTreeView" name="filterTreeView"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="descriptionL">
+         <property name="text">
+          <string>Описание:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="descriptionTE">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="showImagePB">
+       <property name="text">
+        <string>&lt;&lt; Показать картинки</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="openFilterPB">
+       <property name="text">
+        <string>Открыть фильтр</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="okPB">
+       <property name="text">
+        <string>Выбрать</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelPB">
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ICEGUI_NS::FilterTreeView</class>
+   <extends>QTreeView</extends>
+   <header>filtertreeview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>okPB</sender>
+   <signal>clicked()</signal>
+   <receiver>FilterManageDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelPB</sender>
+   <signal>clicked()</signal>
+   <receiver>FilterManageDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openFilterPB</sender>
+   <signal>clicked()</signal>
+   <receiver>FilterManageDialog</receiver>
+   <slot>openFilterPB_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>280</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>findLE</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>FilterManageDialog</receiver>
+   <slot>findLE_textChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showImagePB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>FilterManageDialog</receiver>
+   <slot>showImagePB_clicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openFilterPB_clicked()</slot>
+  <slot>findLE_textChanged(QString)</slot>
+  <slot>showImagePB_clicked(bool)</slot>
+ </slots>
+</ui>

@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/dvg/icegui">
+    <file>images/addFilter.png</file>
+    <file>images/delFilter.png</file>
+    <file>images/connectdb.png</file>
+    <file>images/connecttodb.png</file>
+    <file>images/contrast.png</file>
+    <file>images/turn.png</file>
+    <file>images/open.png</file>
+    <file>google_maps.html</file>
+  </qresource>
+</RCC>

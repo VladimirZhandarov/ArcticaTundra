@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageCutUpDialog</class>
+ <widget class="QDialog" name="ImageCutUpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>516</width>
+    <height>246</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Разрезка изображения</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QGroupBox" name="totalImageGB">
+       <property name="title">
+        <string>Исходное изображение</string>
+       </property>
+       <widget class="QLabel" name="totalWidthValueL">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>23</y>
+          <width>70</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>70</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="totalWidthL">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>23</y>
+          <width>44</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ширина:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="totalHeightL">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>42</y>
+          <width>41</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Высота:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="totalHeightValueL">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>42</y>
+          <width>70</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>70</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="partImageGB">
+       <property name="title">
+        <string>Настройки разрезки</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="partWidthL">
+            <property name="text">
+             <string>Ширина:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QDoubleSpinBox" name="partWidthPointDSB">
+            <property name="suffix">
+             <string/>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>10000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="partWidthCountL">
+            <property name="text">
+             <string>Частей по горизонтали:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QDoubleSpinBox" name="partWidthCountDSB">
+            <property name="suffix">
+             <string/>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>10000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="partHeightL">
+            <property name="text">
+             <string>Высота:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDoubleSpinBox" name="partHeightPointDSB">
+            <property name="suffix">
+             <string/>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>10000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="partHeightCountL">
+            <property name="text">
+             <string>Частей по вертикали:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QDoubleSpinBox" name="partHeightCountDSB">
+            <property name="suffix">
+             <string/>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>10000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="keepAspectRatioChB">
+          <property name="text">
+           <string>Сохранять пропорции изображения</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="dirL">
+       <property name="text">
+        <string>Каталог для сохранения результата:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="dirLE">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="dirTB">
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="resultCountL">
+       <property name="text">
+        <string>Получено фрагментов изображений:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="resultCountValueL">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="openResultFolderPB">
+       <property name="text">
+        <string>Открыть папку</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="openResultFolderChB">
+       <property name="text">
+        <string>Отрывать папку результатов</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="startPB">
+       <property name="text">
+        <string>Начать</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closePB">
+       <property name="text">
+        <string>Закрыть</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closePB</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>417</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>partWidthCountDSB</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>partWidthCountDSB_valueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>partHeightCountDSB</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>partHeightCountDSB_valueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>keepAspectRatioChB</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>keepAspectRatioChB_stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>partWidthPointDSB</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>partWidthPointDSB_valueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>partHeightPointDSB</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>partHeightPointDSB_valueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dirTB</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>dirTB_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>509</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>startPB</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>startPB_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>403</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openResultFolderPB</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageCutUpDialog</receiver>
+   <slot>openResultFolderPB_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>53</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>partWidthPointDSB_valueChanged(double)</slot>
+  <slot>partHeightPointDSB_valueChanged(double)</slot>
+  <slot>partWidthCountDSB_valueChanged(double)</slot>
+  <slot>partHeightCountDSB_valueChanged(double)</slot>
+  <slot>keepAspectRatioChB_stateChanged(int)</slot>
+  <slot>dirTB_clicked()</slot>
+  <slot>startPB_clicked()</slot>
+  <slot>openResultFolderPB_clicked()</slot>
+ </slots>
+</ui>

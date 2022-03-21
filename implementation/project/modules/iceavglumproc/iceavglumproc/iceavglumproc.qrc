@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/dvg/iceavglumproc">
+      <file>images/filterintensity.png</file>
+    </qresource>
+</RCC>

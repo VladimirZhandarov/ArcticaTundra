@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageResizeDialog</class>
+ <widget class="QDialog" name="ImageResizeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>287</width>
+    <height>126</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Размер изображения</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="widthL">
+       <property name="text">
+        <string>Ширина:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="widthValueL">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QSpinBox" name="widthPointSB">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>99999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QDoubleSpinBox" name="widthPercentDSB">
+       <property name="suffix">
+        <string>%</string>
+       </property>
+       <property name="decimals">
+        <number>3</number>
+       </property>
+       <property name="minimum">
+        <double>0.001000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>100.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="heightL">
+       <property name="text">
+        <string>Высота:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="heightValueL">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QSpinBox" name="heightPointSB">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>99999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QDoubleSpinBox" name="heightPercentDSB">
+       <property name="suffix">
+        <string>%</string>
+       </property>
+       <property name="decimals">
+        <number>3</number>
+       </property>
+       <property name="minimum">
+        <double>0.001000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>100.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="keepAspectRatioChB">
+     <property name="text">
+      <string>Сохранять пропорции изображения</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>4</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="okPB">
+       <property name="text">
+        <string>Да</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelPB">
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>okPB</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageResizeDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelPB</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageResizeDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>417</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widthPointSB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ImageResizeDialog</receiver>
+   <slot>widthPointSB_valueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>heightPointSB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ImageResizeDialog</receiver>
+   <slot>heightPointSB_valueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widthPercentDSB</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>ImageResizeDialog</receiver>
+   <slot>widthPercentDSB_valueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>heightPercentDSB</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>ImageResizeDialog</receiver>
+   <slot>heightPercentDSB_valueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>keepAspectRatioChB</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>ImageResizeDialog</receiver>
+   <slot>keepAspectRatioChB_stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>widthPointSB_valueChanged(int)</slot>
+  <slot>heightPointSB_valueChanged(int)</slot>
+  <slot>widthPercentDSB_valueChanged(double)</slot>
+  <slot>heightPercentDSB_valueChanged(double)</slot>
+  <slot>keepAspectRatioChB_stateChanged(int)</slot>
+ </slots>
+</ui>

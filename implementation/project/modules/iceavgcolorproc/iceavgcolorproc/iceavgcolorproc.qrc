@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/dvg/iceavgcolorproc">
+        <file>images/filtercolor.png</file>
+    </qresource>
+</RCC>

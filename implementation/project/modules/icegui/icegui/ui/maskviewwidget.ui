@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaskViewWidget</class>
+ <widget class="QWidget" name="MaskViewWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>301</width>
+    <height>23</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="nameL">
+     <property name="text">
+      <string>Маска:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="useChB">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="colorFrame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>23</horstretch>
+       <verstretch>23</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>23</width>
+       <height>23</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>23</width>
+       <height>23</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="colorPB">
+     <property name="text">
+      <string>Цвет</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="alphaL">
+     <property name="text">
+      <string>Прозрачность:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="alphaSB">
+     <property name="suffix">
+      <string>%</string>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../icegui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>colorPB</sender>
+   <signal>clicked()</signal>
+   <receiver>MaskViewWidget</receiver>
+   <slot>colorPB_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useChB</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MaskViewWidget</receiver>
+   <slot>useChB_stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>alphaSB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MaskViewWidget</receiver>
+   <slot>alphaSB_valueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>10</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>11</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>colorPB_clicked()</slot>
+  <slot>useChB_stateChanged(int)</slot>
+  <slot>alphaSB_valueChanged(int)</slot>
+ </slots>
+</ui>

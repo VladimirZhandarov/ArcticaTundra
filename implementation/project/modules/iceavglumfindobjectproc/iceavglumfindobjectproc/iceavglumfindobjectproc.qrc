@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/dvg/iceavglumfindobjectproc">
+      <file>images/filterintensityfindobject.png</file>
+    </qresource>
+</RCC>

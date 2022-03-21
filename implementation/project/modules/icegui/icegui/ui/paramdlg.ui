@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ParamDlg</class>
+ <widget class="QDialog" name="ParamDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>864</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Параметры</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QTreeWidget" name="treeWgt">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="rootIsDecorated">
+       <bool>true</bool>
+      </property>
+      <property name="itemsExpandable">
+       <bool>true</bool>
+      </property>
+      <property name="headerHidden">
+       <bool>true</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>Изображение</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Линейка</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Сетка</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Дополнительно</string>
+        </property>
+       </item>
+      </item>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWgt">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>100</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="GridFrm">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="ICEGUI_NS::GridFrm" name="GridFrm">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>11</y>
+             <width>42</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#0000ff;&quot;&gt;Сетка&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line_2">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>50</y>
+             <width>289</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>110</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Настраиваемая сетка</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="showGridChkBx">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>170</y>
+             <width>117</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Показывать сетку</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="Line" name="line_3">
+           <property name="geometry">
+            <rect>
+             <x>66</x>
+             <y>209</y>
+             <width>354</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>210</y>
+             <width>51</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Вид сетки</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="showGrid800ChBx">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>230</y>
+             <width>291</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Показать сетку пикселей с масштабом 800% и выше</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="colorPenGridL">
+           <property name="geometry">
+            <rect>
+             <x>27</x>
+             <y>276</y>
+             <width>30</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Цвет:</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="colorPenGridPBtn">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>270</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Цвет</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="colorPenGridClrFrm">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>270</y>
+             <width>23</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>23</horstretch>
+             <verstretch>23</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>23</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>23</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="autoFillBackground">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>2</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_9">
+           <property name="geometry">
+            <rect>
+             <x>28</x>
+             <y>324</y>
+             <width>75</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Прозрачность:</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="transparencySldr">
+           <property name="geometry">
+            <rect>
+             <x>113</x>
+             <y>323</y>
+             <width>189</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>60</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+           <property name="invertedControls">
+            <bool>false</bool>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="transparencyLbl">
+           <property name="geometry">
+            <rect>
+             <x>321</x>
+             <y>320</y>
+             <width>31</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="text">
+            <string>60</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="onLineChkBx">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>140</y>
+             <width>81</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>По линейке</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="Line" name="line_8">
+           <property name="geometry">
+            <rect>
+             <x>161</x>
+             <y>362</y>
+             <width>260</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_16">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>363</y>
+             <width>148</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Начальные настройки сетки</string>
+           </property>
+          </widget>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>73</y>
+             <width>361</width>
+             <height>58</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <property name="margin">
+             <number>6</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="hlabelStepGridLbl">
+              <property name="text">
+               <string>Шаг по горизонтали:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QDoubleSpinBox" name="hStepGridPixelDblSpBx">
+              <property name="minimum">
+               <double>5.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1000.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="hUnitGridTxt">
+              <property name="text">
+               <string>Пикселей</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QDoubleSpinBox" name="hStepGridMetricDblSpBx">
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1000.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.001000000000000</double>
+              </property>
+              <property name="value">
+               <double>1.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLabel" name="hUnitMetricGridTxt">
+              <property name="text">
+               <string>Метры</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="vlabelStepGridLbl">
+              <property name="text">
+               <string>Шаг по вертикали:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="vStepGridPixelDblSpBx">
+              <property name="minimum">
+               <double>5.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1000.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="vUnitGridTxt">
+              <property name="text">
+               <string>Пикселей</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QDoubleSpinBox" name="vStepGridMetricDblSpBx">
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1000.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.001000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QLabel" name="vUnitMetricGridTxt">
+              <property name="text">
+               <string>Метры</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QComboBox" name="useGridParamByDefaultCmBx">
+           <property name="geometry">
+            <rect>
+             <x>254</x>
+             <y>401</y>
+             <width>121</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QComboBox::AdjustToContents</enum>
+           </property>
+           <item>
+            <property name="text">
+             <string>По умолчанию</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Пользовательские</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>401</y>
+             <width>232</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>При загрузке использовать настройки сетки:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>466</y>
+             <width>144</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Загрузить настройки сетки:</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="loadUserGridParamPBtn">
+           <property name="geometry">
+            <rect>
+             <x>254</x>
+             <y>466</y>
+             <width>121</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Пользовательские</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="saveUserGridParamPBtn">
+           <property name="geometry">
+            <rect>
+             <x>7</x>
+             <y>430</y>
+             <width>318</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Сохранить текущие настройки сетки как Пользовательские</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="loadDefaultGridParamPBtn">
+           <property name="geometry">
+            <rect>
+             <x>164</x>
+             <y>466</y>
+             <width>87</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>По умолчанию</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="LineFrm">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="ICEGUI_NS::LineFrm" name="LineFrm">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_15">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>62</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#0000ff;&quot;&gt;Линейка&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line_4">
+           <property name="geometry">
+            <rect>
+             <x>322</x>
+             <y>45</y>
+             <width>100</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>44</y>
+             <width>308</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Единицы измерения геометрических величин и шкал линеек</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="useDefaultUnitChBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>115</y>
+             <width>206</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Всегда использовать по умолчанию</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="Line" name="line_6">
+           <property name="geometry">
+            <rect>
+             <x>207</x>
+             <y>174</y>
+             <width>216</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>175</y>
+             <width>192</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Коэффициент масштаба на местности</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line_5">
+           <property name="geometry">
+            <rect>
+             <x>111</x>
+             <y>257</y>
+             <width>310</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_10">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>255</y>
+             <width>95</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Начало координат</string>
+           </property>
+          </widget>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>202</y>
+             <width>219</width>
+             <height>37</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0">
+            <property name="margin">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QDoubleSpinBox" name="ratioDblSpBx">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="decimals">
+               <number>3</number>
+              </property>
+              <property name="minimum">
+               <double>0.001000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>99.998999999999995</double>
+              </property>
+              <property name="singleStep">
+               <double>0.001000000000000</double>
+              </property>
+              <property name="value">
+               <double>1.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0">
+              <property name="margin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="KUnitlbl">
+                <property name="text">
+                 <string>миллиметр</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_20">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>/   Пиксель</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>282</y>
+             <width>245</width>
+             <height>68</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <property name="margin">
+             <number>6</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_23">
+              <property name="text">
+               <string>По горизонтали:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QDoubleSpinBox" name="hOriginDblSpBx">
+              <property name="minimum">
+               <double>-10000.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>10000.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
+              <property name="margin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="hUnitBeginCoordTxt">
+                <property name="text">
+                 <string>миллиметр</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_26">
+              <property name="text">
+               <string>По вертикали:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="vOriginDblSpBx">
+              <property name="minimum">
+               <double>-10000.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>10000.000000000000000</double>
+              </property>
+              <property name="value">
+               <double>0.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0">
+              <property name="margin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="vUnitBeginCoordTxt">
+                <property name="text">
+                 <string>миллиметр</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>5</x>
+             <y>68</y>
+             <width>198</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0">
+            <property name="margin">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Единицы измерений:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="unitCmBx">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>Пиксель</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Метр</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Километр</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QPushButton" name="loadUserLineParamPBtn">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>465</y>
+             <width>121</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Пользовательские</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="useLineParamByDefaultCmBx">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>395</y>
+             <width>121</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QComboBox::AdjustToContents</enum>
+           </property>
+           <item>
+            <property name="text">
+             <string>По умолчанию</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Пользовательские</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPushButton" name="loadDefaultLineParamPBtn">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>465</y>
+             <width>87</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>По умолчанию</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="saveUserLineParamPBtn">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>429</y>
+             <width>331</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Сохранить текущие настройки линейки как Пользовательские</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>398</y>
+             <width>245</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>При загрузке использовать настройки линейки:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_19">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>362</y>
+             <width>158</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Начальные настройки линейки</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line_9">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>361</y>
+             <width>248</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_21">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>470</y>
+             <width>157</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Загрузить настройки линейки:</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="showLineChkBx">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>143</y>
+             <width>130</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Показывать линейку</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="AddedFrm">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#0000ff;&quot;&gt;Дополнительно&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="objectTableFileCreateAutoChB">
+          <property name="text">
+           <string>Создавать списки объектов автоматически</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="htmlFileCreateAutoChB">
+          <property name="text">
+           <string>Создавать файлы отчётов автоматически</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="halfArcLengthChB">
+          <property name="text">
+           <string>Отображать полупериметр</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QLabel" name="jpegQualityL">
+              <property name="text">
+               <string>Качество сжатия JPEG</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="jpegQualitySB">
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>95</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Курсор</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="useColorCursorChB">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Использовать цветной курсор</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="colorCursorL">
+            <property name="text">
+             <string>Цвет:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="colorCursorFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>23</horstretch>
+              <verstretch>23</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>23</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>23</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="lineWidth">
+             <number>2</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="colorCursorPB">
+            <property name="text">
+             <string>Цвет</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>416</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="ImageFrm">
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>24</x>
+          <y>24</y>
+          <width>99</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#0000ff;&quot;&gt;Изображение&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="okPBtn">
+         <property name="text">
+          <string>ОК</string>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelPBtn">
+         <property name="text">
+          <string>Отмена</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Справка</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ICEGUI_NS::GridFrm</class>
+   <extends>QFrame</extends>
+   <header>paramdlg.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ICEGUI_NS::LineFrm</class>
+   <extends>QFrame</extends>
+   <header>paramdlg.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>transparencySldr</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>transparencyLbl</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>618</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>okPBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ParamDlg</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelPBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ParamDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>766</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeWgt</sender>
+   <signal>currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)</signal>
+   <receiver>ParamDlg</receiver>
+   <slot>onCurrentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>431</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useColorCursorChB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ParamDlg</receiver>
+   <slot>useColorCursorChB_toggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>562</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>431</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorCursorPB</sender>
+   <signal>clicked()</signal>
+   <receiver>ParamDlg</receiver>
+   <slot>colorCursorPB_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>431</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>false</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>false</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>onCurrentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)</slot>
+  <slot>useColorCursorChB_toggled(bool)</slot>
+  <slot>colorCursorPB_clicked()</slot>
+ </slots>
+</ui>
